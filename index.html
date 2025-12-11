@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+ <style>
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1{
+        font-size: clamp(2rem, 8vw, 5.5em); /* Makes the text scale on small screens */
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    button{
+        padding: 10px 25px;
+        border-radius: 8px;
+        background: blue;
+        color: white;
+        border: none;
+        font-size: clamp(1rem, 4vw, 1.5em); /* Responsive font size */
+        margin: 7px;
+    }
+
+    #increment{
+        background: green;
+    }
+    #decrement{
+        background: blue;
+    }
+    #reset{
+        background: red;
+    }
+
+    .btn {
+        display: flex;
+        flex-wrap: wrap; /* Buttons drop below each other on small screens */
+        justify-content: center;
+        gap: 10px;
+    }
+
+</style>
+
+
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="titles">
+            <h1 id="reward"></h1>
+            <h1 id="counter">0</h1>
+
+        </div>
+        <div class="btn">
+            <button id="increment">Increment</button>
+            <button id="decrement">Decrement</button>
+            <button id="reset">Reset</button>
+        </div>
+        
+
+    </div>
+    
+    <script src="script.js"></script>   
+</body>
+</html>
